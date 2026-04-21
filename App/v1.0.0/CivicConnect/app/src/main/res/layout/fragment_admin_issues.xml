@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:padding="16dp" android:background="#F7F8FB">
+
+    <LinearLayout android:orientation="vertical"
+        android:layout_width="match_parent" android:layout_height="wrap_content">
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            app:cardCornerRadius="16dp" app:cardElevation="1dp"
+            android:backgroundTint="@android:color/white" android:padding="16dp">
+
+            <LinearLayout android:orientation="vertical"
+                android:layout_width="match_parent" android:layout_height="wrap_content">
+
+                <TextView android:id="@+id/tvTitle"
+                    android:textStyle="bold" android:textSize="18sp"
+                    android:textColor="#1E1E1E"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content" />
+
+                <TextView android:id="@+id/tvCategory"
+                    android:textColor="#6B6B6B" android:textSize="13sp"
+                    android:layout_marginTop="4dp"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+                <ImageView android:id="@+id/ivImage"
+                    android:layout_width="match_parent" android:layout_height="180dp"
+                    android:scaleType="centerCrop" android:layout_marginTop="12dp"
+                    android:background="@drawable/bg_card_rounded"/>
+
+                <TextView android:id="@+id/tvDescription"
+                    android:layout_marginTop="12dp"
+                    android:textColor="#1E1E1E"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"/>
+
+                <TextView android:id="@+id/tvLocation"
+                    android:layout_marginTop="8dp"
+                    android:textColor="#1E1E1E"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"/>
+
+                <TextView android:id="@+id/tvTracking"
+                    android:layout_marginTop="8dp"
+                    android:textColor="#6B6B6B"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+                <!-- Admin controls -->
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:hint="Status" android:layout_marginTop="16dp">
+                    <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                        android:id="@+id/spStatus"
+                        android:layout_width="match_parent" android:layout_height="wrap_content"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnSave"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Save Status" android:textAllCaps="false"
+                    android:layout_marginTop="8dp" android:backgroundTint="#0A3D91"
+                    android:textColor="@android:color/white"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            app:cardCornerRadius="16dp" app:cardElevation="1dp"
+            android:backgroundTint="@android:color/white"
+            android:padding="16dp" android:layout_marginTop="16dp">
+
+            <LinearLayout android:orientation="vertical"
+                android:layout_width="match_parent" android:layout_height="wrap_content">
+
+                <TextView android:text="Remarks" android:textStyle="bold"
+                    android:textSize="16sp" android:textColor="#1E1E1E"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+                <TextView android:id="@+id/tvRemarks"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp" android:textColor="#1E1E1E"/>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp" android:hint="Add remark">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etRemark"
+                        android:layout_width="match_parent" android:layout_height="wrap_content"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnAddRemark"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Add Remark" android:textAllCaps="false"
+                    android:layout_marginTop="8dp"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+</ScrollView>

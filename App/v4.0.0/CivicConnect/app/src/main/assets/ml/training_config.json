@@ -1,0 +1,49 @@
+{
+  "output_dir": "priority_mobile_outputs",
+  "title_col": "Title",
+  "description_col": "Description",
+  "category_col": "Category",
+  "label_col": "PriorityScore",
+  "preprocess_handle": "https://tfhub.dev/tensorflow/bert_en_uncased_preprocess/3",
+  "encoder_handle": "https://tfhub.dev/tensorflow/small_bert/bert_en_uncased_L-4_H-512_A-8/1",
+  "train_teacher": true,
+  "teacher_max_epochs": 5,
+  "teacher_batch_size": 16,
+  "teacher_learning_rate": 3e-05,
+  "student_max_epochs": 20,
+  "student_batch_size": 64,
+  "student_learning_rate": 0.002,
+  "validation_size": 0.15,
+  "test_size": 0.15,
+  "random_state": 42,
+  "vocab_size": 20000,
+  "max_sequence_length": 96,
+  "embed_dim": 128,
+  "conv_filters": 128,
+  "dropout": 0.25,
+  "distill_blend": 0.35,
+  "text_template": "title: {title} category: {category} description: {description} important_title: {title}",
+  "actual_vocab_size": 151,
+  "teacher_available": true,
+  "pad_token_id": 0,
+  "oov_token_id": 1,
+  "input_name": "token_ids",
+  "input_dtype": "int32",
+  "input_shape": [
+    1,
+    96
+  ],
+  "output_name": "priority_score",
+  "output_range": [
+    0.0,
+    1.0
+  ],
+  "tflite_model": "priority_mobile_regressor.tflite",
+  "vocab_file": "vocabulary.txt",
+  "normalization": {
+    "lowercase": true,
+    "regex_replace": "[^a-z0-9:_ ]+",
+    "collapse_whitespace": true,
+    "trim": true
+  }
+}

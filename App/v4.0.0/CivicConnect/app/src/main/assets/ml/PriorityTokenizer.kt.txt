@@ -1,0 +1,30 @@
+import java.util.Locale
+
+object PriorityTokenizer {
+    const val MAX_SEQUENCE_LENGTH = 96
+    private val invalidChars = Regex("[^a-z0-9:_ ]+")
+    private val multiSpace = Regex("\s+")
+
+    fun buildModelText(title: String, description: String, category: String): String {
+        return "title: $title category: $category description: $description important_title: $title"
+    }
+
+    fun normalize(raw: String): String {
+        return raw
+            .lowercase(Locale.US)
+            .replace(invalidChars, " ")
+            .replace(multiSpace, " ")
+            .trim()
+    }
+
+    fun encode(title: String, description: String, category: String, vocab: Map<String, Int>): IntArray {
+        val normalized = normalize(buildModelText(title, description, category))
+        val tokens = normalized.split(" ").filter { it.isNotBlank() }
+        val ids = IntArray(MAX_SEQUENCE_LENGTH)
+        val limit = minOf(tokens.size, MAX_SEQUENCE_LENGTH)
+        for (i in 0 until limit) {
+            ids[i] = vocab[tokens[i]] ?: 1
+        }
+        return ids
+    }
+}

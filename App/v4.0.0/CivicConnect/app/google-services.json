@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "716982801429",
+    "project_id": "civicconnect-b5d6c",
+    "storage_bucket": "civicconnect-b5d6c.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:716982801429:android:2fc943f30cae22f02cea1c",
+        "android_client_info": {
+          "package_name": "com.example.civicconnect"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBOdpQBQfk9I46W_z42laAKzsgAPQpQaAw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

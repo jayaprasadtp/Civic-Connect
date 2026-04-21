@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="nav_active">#0A3D91</color> <!-- navy blue -->
+    <color name="nav_inactive">#B0B0B0</color>
+    <color name="white">#FFFFFF</color>
+    <color name="bg_light">#F7F8FB</color>
+    <color name="welcome_bg">#e9eaec</color>
+
+    <!-- Dashboard / Status -->
+    <color name="colorReported">#0A3D91</color>     <!-- Navy Blue -->
+    <color name="colorInProgress">#F6A623</color>  <!-- Warm Orange -->
+    <color name="colorResolved">#3BB273</color>    <!-- Green -->
+    <color name="colorDefault">#888888</color>     <!-- Fallback grey -->
+    <color name="splash_bg_color">#F7F8FB</color>
+
+    <!-- Priority -->
+    <color name="priority_high">#E53935</color>      <!-- Red -->
+    <color name="priority_medium">#FDD835</color>    <!-- Yellow -->
+    <color name="priority_low">#43A047</color>       <!-- Green -->
+
+    <!-- 🔹 Admin Issue Status Colors (match user theme) -->
+    <color name="status_pending">#0A3D91</color>        <!-- Navy Blue -->
+    <color name="status_review">#5DADE2</color>         <!-- Light Blue -->
+    <color name="status_inprogress">#F6A623</color>     <!-- Warm Orange -->
+    <color name="status_resolved">#3BB273</color>       <!-- Green -->
+    <color name="status_rejected">#E53935</color>       <!-- Red -->
+    <color name="gray_light">#D3D3D3</color>            <!-- Light Gray -->
+</resources>
